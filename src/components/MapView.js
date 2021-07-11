@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MapContainer } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const MapView = () => {
@@ -9,7 +9,7 @@ const MapView = () => {
 
     return (
         <MapContainer center={position} zoom={13} >
-
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         </MapContainer>
     )
 }
